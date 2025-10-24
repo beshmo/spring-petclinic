@@ -8,7 +8,8 @@ pipeline {
     }
 
     environment {
-        JAVA_HOME = "/var/jenkins_home/tools/hudson.model.JDK/JDK25/jdk-25.0.1";
+        JAVA_HOME = "${tool 'JDK25'}";
+        PATH = "${tool 'JDK25'}/bin:${tool 'MVN'}/bin:${env.PATH}"
     }
     
     stages {
