@@ -6,6 +6,10 @@ pipeline {
         maven "MVN";
         jdk "JDK25"
     }
+
+    environment {
+        JAVA_HOME = "/var/jenkins_home/tools/hudson.model.JDK/JDK25/jdk-25.0.1";
+    }
     
     stages {
         stage('Build') {
