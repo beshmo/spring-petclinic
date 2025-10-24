@@ -4,6 +4,7 @@ pipeline {
 
     tools {
         maven "MVN";
+        jdk "JDK25"
     }
     
     stages {
