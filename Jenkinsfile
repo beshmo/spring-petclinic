@@ -16,6 +16,10 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building...'
+                script {
+                    echo "java_home: ${JAVA_HOME}"
+                    echo "path: $PATH"
+                }
                 sh 'mvn clean package'
             }
         }
